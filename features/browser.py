@@ -6,14 +6,21 @@ class Browser:
 
     def request(self, http_method: str, endpoint: str):
         self.response = request(http_method, endpoint)
- 
+
     def find_object(self, object_name: str):
         if object_name in self.response:
             return self.response[object_name]
         return None
 
 
-mock_actions = "Mock value for actions"
+def notnull() -> object:
+    return object
+
+
+mock_actions = notnull()
+
+
+# mock_actions = "Mock value for actions"
 
 
 def request(http_method: str, endpoint: str):
@@ -49,10 +56,28 @@ class API:
 # Creating instances of the classes
 website_url = "https://myweb.com"
 api_url = "https://api.myweb.com"
- 
+
 browser = Browser(api_url)
 browser.request("GET", "/api/v1/users")
 # Using the instances to perform actions
 user_list = browser.find_object("data")
 
 print(user_list)
+
+# class Browser:
+#     def __init__(self, url):
+#         self.url = url
+#
+#     def find_object(self, object_name):
+#         if object_name == 'user_list':
+#             return self.user_list
+#         elif object_name == 'admin_count':
+#             return self.admin_count
+#
+#     def visit_users_page(self):
+#         pass  # Implement the logic to visit the Users page on the website
+#
+#     def request(self, http_method, endpoint):
+#         pass  # Implement the logic to make API requests
+#
+#     # Implement other methods as needed
