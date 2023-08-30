@@ -1,5 +1,4 @@
 from behave import given, when, then
-# from asserts import assert_equal
 import sys
 
 sys.path.append('../')
@@ -20,7 +19,6 @@ def step_when_request_api_users(context):
 def step_then_get_http_200(context):
     status_code = context.api.get_status_code()
     assert status_code == 200
-    # assert_equal(status_code, 200)
 
 
 @then('I get JSON in response body')
@@ -33,7 +31,6 @@ def step_then_get_json_response(context):
 def step_then_http_response_contains_4_users(context):
     user_list = context.api.get_response_json()['data']
     assert len(user_list) == 4
-    # assert_equal(len(user_list), 4)
 
 
 @then('1 of them is Administrator')
@@ -41,4 +38,3 @@ def step_then_1_of_them_is_admin(context):
     user_list = context.api.get_response_json()['data']
     admin_count = len([user for user in user_list if user['role'] == 'Administrator'])
     assert admin_count == 1
-    # assert_equal(admin_count, 1)
