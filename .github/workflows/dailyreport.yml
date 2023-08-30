@@ -2,8 +2,8 @@
 
   on:
     schedule:
-      - cron: '15 6 * * *'
-        # Triggers the workflow every day at 6:15 UTC
+      - cron: '35 19 * * *'
+        # Triggers the workflow every day at 19:35 UTC
     workflow_dispatch:
 
   jobs:
