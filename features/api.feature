@@ -1,10 +1,4 @@
-Feature: Testing myweb.com and api.myweb.com
-
-  Scenario: Frontend admin users can get a list of users
-    Given I am logged as admin
-    When I am in Users page
-    Then 4 users are listed
-    And 1 of them is Administrator
+Feature: Testing api.myweb.com
 
   Scenario: API admin users can get a list of users
     Given I am logged as admin
