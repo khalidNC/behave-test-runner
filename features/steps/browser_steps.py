@@ -1,5 +1,5 @@
 from behave import given, when, then
-# from asserts import assert_equal
+from asserts import assert_equal
 import sys
 
 sys.path.append('../')
