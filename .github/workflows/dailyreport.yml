@@ -2,7 +2,7 @@
 
   on:
     schedule:
-      - cron: '0 19 * * * *'
+      - cron: '0 19 * * *'
         # Triggers the workflow every day at 19:00 UTC
     workflow_dispatch:
 
